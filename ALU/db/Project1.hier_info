@@ -1,0 +1,294 @@
+|likeALU_demo
+inp_A[0] => ~NO_FANOUT~
+inp_A[1] => ~NO_FANOUT~
+inp_A[2] => ~NO_FANOUT~
+inp_A[3] => ~NO_FANOUT~
+inp_A[4] => ~NO_FANOUT~
+inp_B[0] => ~NO_FANOUT~
+inp_B[1] => ~NO_FANOUT~
+inp_B[2] => ~NO_FANOUT~
+inp_B[3] => ~NO_FANOUT~
+inp_B[4] => ~NO_FANOUT~
+out[0] << likeALU:testme.port0
+out[1] << likeALU:testme.port0
+out[2] << likeALU:testme.port0
+out[3] << likeALU:testme.port0
+out[4] << likeALU:testme.port0
+select[0] => ~NO_FANOUT~
+select[1] => ~NO_FANOUT~
+
+
+|likeALU_demo|likeALU:testme
+out[0] <= _4inputmux:muxof0.port0
+out[1] <= _4inputmux:muxof1.port0
+out[2] <= _4inputmux:muxof2.port0
+out[3] <= _4inputmux:muxof3.port0
+out[4] <= _4inputmux:muxof4.port0
+inp_A[0] => inp_A[0].IN4
+inp_A[1] => inp_A[1].IN4
+inp_A[2] => inp_A[2].IN4
+inp_A[3] => inp_A[3].IN4
+inp_A[4] => inp_A[4].IN4
+inp_B[0] => inp_B[0].IN4
+inp_B[1] => inp_B[1].IN4
+inp_B[2] => inp_B[2].IN4
+inp_B[3] => inp_B[3].IN4
+inp_B[4] => inp_B[4].IN4
+select[0] => select[0].IN5
+select[1] => select[1].IN5
+
+
+|likeALU_demo|likeALU:testme|_5bitand:InAandInB
+out[0] <= andof0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= andof1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= andof2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= andof3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= andof4.DB_MAX_OUTPUT_PORT_TYPE
+inp_A[0] => andof0.IN0
+inp_A[1] => andof1.IN0
+inp_A[2] => andof2.IN0
+inp_A[3] => andof3.IN0
+inp_A[4] => andof4.IN0
+inp_B[0] => andof0.IN1
+inp_B[1] => andof1.IN1
+inp_B[2] => andof2.IN1
+inp_B[3] => andof3.IN1
+inp_B[4] => andof4.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB
+S[0] <= full_adder:FA0.port0
+S[1] <= full_adder:FA1.port0
+S[2] <= full_adder:FA2.port0
+S[3] <= full_adder:FA3.port0
+S[4] <= full_adder:FA4.port0
+C <= full_adder:FA4.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+C0 => C0.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA0
+sum <= half_adder:second_sum.port0
+carry_out <= final_carry_out.DB_MAX_OUTPUT_PORT_TYPE
+a => a.IN1
+b => b.IN1
+carry_in => carry_in.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA0|half_adder:first_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA0|half_adder:second_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA1
+sum <= half_adder:second_sum.port0
+carry_out <= final_carry_out.DB_MAX_OUTPUT_PORT_TYPE
+a => a.IN1
+b => b.IN1
+carry_in => carry_in.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA1|half_adder:first_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA1|half_adder:second_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA2
+sum <= half_adder:second_sum.port0
+carry_out <= final_carry_out.DB_MAX_OUTPUT_PORT_TYPE
+a => a.IN1
+b => b.IN1
+carry_in => carry_in.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA2|half_adder:first_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA2|half_adder:second_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA3
+sum <= half_adder:second_sum.port0
+carry_out <= final_carry_out.DB_MAX_OUTPUT_PORT_TYPE
+a => a.IN1
+b => b.IN1
+carry_in => carry_in.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA3|half_adder:first_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA3|half_adder:second_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA4
+sum <= half_adder:second_sum.port0
+carry_out <= final_carry_out.DB_MAX_OUTPUT_PORT_TYPE
+a => a.IN1
+b => b.IN1
+carry_in => carry_in.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA4|half_adder:first_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitadder:InAaddInB|full_adder:FA4|half_adder:second_sum
+sum <= sum_of_digits.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_of_sum.DB_MAX_OUTPUT_PORT_TYPE
+a => sum_of_digits.IN0
+a => carry_of_sum.IN0
+b => sum_of_digits.IN1
+b => carry_of_sum.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitor:InAorInB
+out[0] <= orof0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= orof1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= orof2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= orof3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= orof4.DB_MAX_OUTPUT_PORT_TYPE
+inp_A[0] => orof0.IN0
+inp_A[1] => orof1.IN0
+inp_A[2] => orof2.IN0
+inp_A[3] => orof3.IN0
+inp_A[4] => orof4.IN0
+inp_B[0] => orof0.IN1
+inp_B[1] => orof1.IN1
+inp_B[2] => orof2.IN1
+inp_B[3] => orof3.IN1
+inp_B[4] => orof4.IN1
+
+
+|likeALU_demo|likeALU:testme|_5bitxor:InxorInB
+out[0] <= xorof0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= xorof1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= xorof2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= xorof3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= xorof4.DB_MAX_OUTPUT_PORT_TYPE
+inp_A[0] => xorof0.IN0
+inp_A[1] => xorof1.IN0
+inp_A[2] => xorof2.IN0
+inp_A[3] => xorof3.IN0
+inp_A[4] => xorof4.IN0
+inp_B[0] => xorof0.IN1
+inp_B[1] => xorof1.IN1
+inp_B[2] => xorof2.IN1
+inp_B[3] => xorof3.IN1
+inp_B[4] => xorof4.IN1
+
+
+|likeALU_demo|likeALU:testme|_4inputmux:muxof0
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+select[0] => Mux0.IN5
+select[1] => Mux0.IN4
+
+
+|likeALU_demo|likeALU:testme|_4inputmux:muxof1
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+select[0] => Mux0.IN5
+select[1] => Mux0.IN4
+
+
+|likeALU_demo|likeALU:testme|_4inputmux:muxof2
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+select[0] => Mux0.IN5
+select[1] => Mux0.IN4
+
+
+|likeALU_demo|likeALU:testme|_4inputmux:muxof3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+select[0] => Mux0.IN5
+select[1] => Mux0.IN4
+
+
+|likeALU_demo|likeALU:testme|_4inputmux:muxof4
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Mux0.IN3
+in[1] => Mux0.IN2
+in[2] => Mux0.IN1
+in[3] => Mux0.IN0
+select[0] => Mux0.IN5
+select[1] => Mux0.IN4
+
+
