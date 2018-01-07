@@ -1,0 +1,98 @@
+# Reading E:/Quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do Project1_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/half_adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module half_adder
+# 
+# Top level modules:
+# 	half_adder
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/full_adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/_4inputmux.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _4inputmux
+# 
+# Top level modules:
+# 	_4inputmux
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/_5bitand.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _5bitand
+# 
+# Top level modules:
+# 	_5bitand
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/_5bitadder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _5bitadder
+# 
+# Top level modules:
+# 	_5bitadder
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/_5bitor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _5bitor
+# 
+# Top level modules:
+# 	_5bitor
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/_5bitxor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module _5bitxor
+# 
+# Top level modules:
+# 	_5bitxor
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/likeALU_demo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module likeALU_demo
+# 
+# Top level modules:
+# 	likeALU_demo
+# vlog -vlog01compat -work work +incdir+E:/Verilogworkspace/Project1 {E:/Verilogworkspace/Project1/likealu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module likeALU
+# 
+# Top level modules:
+# 	likeALU
+# 
+vlog -reportprogress 300 -work work E:/Verilogworkspace/Project1/likeALU_testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module likeALU_testbench
+# 
+# Top level modules:
+# 	likeALU_testbench
+vsim work.likeALU_testbench
+# vsim work.likeALU_testbench 
+# Loading work.likeALU_testbench
+# Loading work.likeALU
+# Loading work._5bitand
+# Loading work._5bitadder
+# Loading work.full_adder
+# Loading work.half_adder
+# Loading work._5bitor
+# Loading work._5bitxor
+# Loading work._4inputmux
+add wave -position insertpoint  \
+sim:/likeALU_testbench/inp_A \
+sim:/likeALU_testbench/inp_B \
+sim:/likeALU_testbench/select \
+sim:/likeALU_testbench/out
+step -current
+# time =  0, inp_A =10101, inp_B=11111, select=00, out=10101
+# time = 20, inp_A =10101, inp_B=11111, select=01, out=10100
+# time = 40, inp_A =10101, inp_B=11111, select=10, out=11111
+# time = 60, inp_A =10101, inp_B=11111, select=11, out=01010
+# time = 80, inp_A =11111, inp_B=11111, select=00, out=11111
+# time = 100, inp_A =11111, inp_B=11111, select=01, out=11110
+# time = 120, inp_A =11111, inp_B=11111, select=10, out=11111
+# time = 140, inp_A =11111, inp_B=11111, select=11, out=00000

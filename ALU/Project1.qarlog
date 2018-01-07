@@ -1,0 +1,29 @@
+Quartus II Archive log --	K:/Verilogworkspace/Project1/Project1.qarlog
+
+Archive:	K:/Verilogworkspace/Project1/Project1.qar
+Date:		Thu Oct 26 01:27:57 2017
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+K:/Verilogworkspace/Project1/Project1.qpf
+K:/Verilogworkspace/Project1/Project1.qsf
+K:/Verilogworkspace/Project1/_4inputmux.v
+K:/Verilogworkspace/Project1/_5bitadder.v
+K:/Verilogworkspace/Project1/_5bitand.v
+K:/Verilogworkspace/Project1/_5bitor.v
+K:/Verilogworkspace/Project1/_5bitxor.v
+K:/Verilogworkspace/Project1/db/Project1.cmp.hdb
+K:/Verilogworkspace/Project1/db/Project1.db_info
+K:/Verilogworkspace/Project1/full_adder.v
+K:/Verilogworkspace/Project1/full_adder_testbench.v
+K:/Verilogworkspace/Project1/half_adder.v
+K:/Verilogworkspace/Project1/half_adder_testbench.v
+K:/Verilogworkspace/Project1/incremental_db/compiled_partitions/Project1.db_info
+K:/Verilogworkspace/Project1/likeALU.v
+K:/Verilogworkspace/Project1/likeALU_demo.v
+K:/Verilogworkspace/Project1/likeALU_testbench.v
+k:/quartus/quartus/bin64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

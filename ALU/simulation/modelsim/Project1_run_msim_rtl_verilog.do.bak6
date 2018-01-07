@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/half_adder.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/full_adder.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/_4inputmux.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/likeALU.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/_5bitand.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/_5bitadder.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/_5bitor.v}
+vlog -vlog01compat -work work +incdir+K:/Verilogworkspace/Project1 {K:/Verilogworkspace/Project1/_5bitxor.v}
+

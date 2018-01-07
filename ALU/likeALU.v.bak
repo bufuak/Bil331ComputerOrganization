@@ -1,0 +1,7 @@
+module likeALU(out,inp_A,inp_B,select)
+input[4:0] inp_A;
+input[4:0] inp_B;
+input[1:0] select;
+output[4:0]
+
+endmodule
