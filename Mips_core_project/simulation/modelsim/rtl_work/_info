@@ -1,0 +1,125 @@
+m255
+K3
+13
+cModel Technology
+Z0 dK:\Verilogworkspace\Project3\simulation\modelsim
+vALU
+IX=R14DOQB:hAR9=ANR=>Q1
+VfGmSeg:MKz?oA98dZL:]a0
+Z1 dK:\Verilogworkspace\Project3\simulation\modelsim
+w1514318636
+8K:/Verilogworkspace/Project3/ALU.v
+FK:/Verilogworkspace/Project3/ALU.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+K:/Verilogworkspace/Project3 -O0
+n@a@l@u
+!i10b 1
+!s100 ]98FR[QcD2eGhZQUiTSPP3
+!s85 0
+!s108 1515001565.619000
+!s107 K:/Verilogworkspace/Project3/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+K:/Verilogworkspace/Project3|K:/Verilogworkspace/Project3/ALU.v|
+!s101 -O0
+vmips_core
+IS@cMj6f<h<Q:8BV5`TUTF0
+V0Sk19oBV`O>:DALa;PI@U0
+R1
+w1515001550
+8K:/Verilogworkspace/Project3/mips_core.v
+FK:/Verilogworkspace/Project3/mips_core.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 94P:@[j_UJ<XazemNF3gC0
+!s85 0
+!s108 1515001565.566000
+!s107 K:/Verilogworkspace/Project3/mips_core.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+K:/Verilogworkspace/Project3|K:/Verilogworkspace/Project3/mips_core.v|
+!s101 -O0
+vmips_data_mem
+I[;RYjHGk5T[hf>FR?IdSW1
+ViT6eMBm9C]?3KaO7IB64@3
+R1
+w1514931438
+8K:/Verilogworkspace/Project3/mips_data_mem.v
+FK:/Verilogworkspace/Project3/mips_data_mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 Yg[mSQQ>FHMJGU[Mg7F_z1
+!s85 0
+!s108 1515001565.734000
+!s107 K:/Verilogworkspace/Project3/mips_data_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+K:/Verilogworkspace/Project3|K:/Verilogworkspace/Project3/mips_data_mem.v|
+!s101 -O0
+vmips_instr_mem
+Ime8]K`hh^K^mLm[Sg4gnU0
+VWI?LDEJ@`5imZY0<6h3QT2
+R1
+w1514839932
+8K:/Verilogworkspace/Project3/mips_instr_mem.v
+FK:/Verilogworkspace/Project3/mips_instr_mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 fiaCQ0aKoiCSZF9OTeSLc2
+!s85 0
+!s108 1515001565.682000
+!s107 K:/Verilogworkspace/Project3/mips_instr_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+K:/Verilogworkspace/Project3|K:/Verilogworkspace/Project3/mips_instr_mem.v|
+!s101 -O0
+vmips_registers
+Io@Z_0@UcUAi<ii9?Y=gnd0
+VIKjnY3G]3R=R@`]J?b;XX0
+R1
+w1514853198
+8K:/Verilogworkspace/Project3/mips_registers.v
+FK:/Verilogworkspace/Project3/mips_registers.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 d5<8SHUbg=j<PZ75M<FhJ3
+!s85 0
+!s108 1515001565.785000
+!s107 K:/Verilogworkspace/Project3/mips_registers.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+K:/Verilogworkspace/Project3|K:/Verilogworkspace/Project3/mips_registers.v|
+!s101 -O0
+vmips_testbench
+!i10b 1
+!s100 @R6gRBO]J8@Sck]j8lP950
+IG@Mg=JRNjIY9z65;S2kZ23
+Vf2]IUD=7[>X:I4<2Q=7YA2
+R1
+w1514835600
+8K:/Verilogworkspace/Project3/mips_core_testbench.v
+FK:/Verilogworkspace/Project3/mips_core_testbench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1515001923.552000
+!s107 K:/Verilogworkspace/Project3/mips_core_testbench.v|
+!s90 -reportprogress|300|-work|work|K:/Verilogworkspace/Project3/mips_core_testbench.v|
+!s101 -O0
+o-work work -O0
