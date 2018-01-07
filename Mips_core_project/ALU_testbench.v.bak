@@ -1,0 +1,42 @@
+module ALU_testbench();
+
+reg [31:0] read_data_1;
+reg [31:0] read_data_2;
+reg [4:0] shmat;
+reg [5:0] opcode;
+reg clk;
+wire [31:0] result;
+
+ALU ALUtb (result, read_data_1, read_data_2,shmat,opcode,clk);
+
+initial begin
+read_data_1 = 32'b10000000000000000000000000000100; read_data_2 = 32'b01111111111111111111111111111100; shmat=5'b00010 ; opcode = 6'b000011;  #10; // testing add
+
+read_data_1 = 32'b10000000000000000000000000000101; read_data_2 = 32'b00000000000000000000000000001101; shmat=5'b00000 ; opcode = 6'b100000;  #10;	// testing addu
+
+read_data_1 = 32'b10101010101010101010101010101010; read_data_2 = 32'b11111111111111110000000000000000; shmat=5'b00000 ; opcode = 6'b100100;  #10;	// testing and
+
+read_data_1 = 32'b10101010101010101010101010101010; read_data_2 = 32'b11111111111111110000000000000000; shmat=5'b00000 ; opcode = 6'b100101;  #10; // testing or
+
+read_data_1 = 32'b10000000000000000000000000000100; read_data_2 = 32'b00000000000000000000000000001101; shmat=5'b00011 ; opcode = 6'b000000;  #10; // testing sll
+
+read_data_1 = 32'b10000000000000000000000000001100; read_data_2 = 32'b10000000000000000000000000001101; shmat=5'b00000 ; opcode = 6'b101011;  #10; // testing sltu
+
+read_data_1 = 32'b10000000000000000000000000000100; read_data_2 = 32'b10000000000000000000001000001100; shmat=5'b00011 ; opcode = 6'b000011;  #10; // testing sra
+
+read_data_1 = 32'b10000000000000000000000000000100; read_data_2 = 32'b10000000000000000000001000001100; shmat=5'b00010 ; opcode = 6'b000010;  #10; // testing srl
+
+read_data_1 = 32'b10000000000000000000000010001101; read_data_2 = 32'b10000000000000000000000000001100; shmat=5'b00000 ; opcode = 6'b100010;  #10; // testing sub
+
+
+end
+
+initial
+begin
+$monitor("time = %2d,opcode=%6b,read_data_1=%32b,read_data_2=%32b,result=%32b", $time,opcode ,read_data_1, read_data_2,result);
+end
+
+
+
+
+endmodule

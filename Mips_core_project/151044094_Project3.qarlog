@@ -1,0 +1,31 @@
+Quartus II Archive log --	K:/Verilogworkspace/Project3/151044094_Project3.qarlog
+
+Archive:	K:/Verilogworkspace/Project3/151044094_Project3.qar
+Date:		Wed Jan 03 21:09:19 2018
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+K:/Verilogworkspace/Project3/151044094.qpf
+K:/Verilogworkspace/Project3/ALU.v
+K:/Verilogworkspace/Project3/ALU_testbench.v
+K:/Verilogworkspace/Project3/assignment_defaults.qdf
+K:/Verilogworkspace/Project3/db/project02.cmp.hdb
+K:/Verilogworkspace/Project3/db/project02.db_info
+K:/Verilogworkspace/Project3/incremental_db/compiled_partitions/project02.db_info
+K:/Verilogworkspace/Project3/mips_core.v
+K:/Verilogworkspace/Project3/mips_core_testbench.v
+K:/Verilogworkspace/Project3/mips_data_mem.v
+K:/Verilogworkspace/Project3/mips_data_mem_testbench.v
+K:/Verilogworkspace/Project3/mips_instr_mem.v
+K:/Verilogworkspace/Project3/mips_instr_mem_testbench.v
+K:/Verilogworkspace/Project3/mips_registers.v
+K:/Verilogworkspace/Project3/mips_registers_testbench.v
+K:/Verilogworkspace/Project3/project02.qsf
+K:/Verilogworkspace/Project3/project03.qsf
+K:/Verilogworkspace/Project3/simulation/modelsim/data.mem
+K:/Verilogworkspace/Project3/simulation/modelsim/instruction.mem
+K:/Verilogworkspace/Project3/simulation/modelsim/registers.mem
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

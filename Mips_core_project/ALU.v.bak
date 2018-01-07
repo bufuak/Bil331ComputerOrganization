@@ -1,0 +1,41 @@
+module ALU (result, read_data_1, read_data_2,shmat,opcode,clk);
+	input [31:0] read_data_1;
+	input [31:0] read_data_2;
+	input [4:0] shmat;
+	input [5:0] opcode;
+	input clk;
+	output reg[31:0] result;
+	reg signed [31:0] temp1;
+	reg signed [31:0] temp2;
+	reg signed [31:0] signed_result;
+	
+	always@(read_data_1 or read_data_2)
+	begin
+	if(opcode==6'b100000) //add
+		begin
+		temp1=read_data_1;
+		temp2=read_data_2;
+		signed_result=temp1+temp2;
+		result=signed_result;
+		end
+	else if(opcode==6'b100001) //addu
+		result=read_data_1+read_data_2;
+	else if(opcode==6'b100100) //and
+		result=read_data_1 & read_data_2;
+	else if(opcode==6'b100101) // or
+		result=read_data_1 | read_data_2;
+	else if(opcode==6'b000000) // sll
+		result=read_data_2 << shmat;
+	else if(opcode==6'b101011)	// sltu
+		begin
+		if(read_data_1<read_data_2)
+			result=32'b1;
+		end
+	else if(opcode==6'b000011)	//sra
+		result= $signed(read_data_2) >>> shmat;
+	else if(opcode==6'b000010) //srl
+		result= read_data_2 >>> shmat;
+	else if(opcode==6'b100010) //sub
+		result= read_data_1-read_data_2;
+	end
+endmodule

@@ -1,0 +1,35 @@
+module mips_core(instruction, result);
+
+input [31:0] instruction;
+output reg [31:0] result;
+wire [31:0] read_data_1;
+wire [31:0] read_data_2;
+wire [31:0] write_data;
+wire [4:0] rs;
+wire [4:0] rt;
+wire [4:0] rd;
+wire [4:0] shmat;
+wire [5:0] opcode;
+wire [31:0] x,y;
+reg clk;
+reg write_signal;
+
+initial clk=0;
+initial write_signal=1;
+assign opcode=instruction[5:0];
+assign rs=instruction[25:21];
+assign rt=instruction[20:16];
+assign rd=instruction[15:11];
+assign shmat=instruction[10:6];
+
+mips_registers regblock(read_data_1, read_data_2, write_data, rs, rt, rd, write_signal, clk );
+ALU ALUblock(write_data,read_data_1,read_data_2,shmat,opcode,clk);
+always @(read_data_1 or read_data_2)
+begin
+clk = !clk;
+#9;
+result=write_data;
+#1;
+clk = !clk;
+end
+endmodule      
