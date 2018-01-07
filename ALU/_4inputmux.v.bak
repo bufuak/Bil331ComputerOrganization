@@ -1,0 +1,13 @@
+module _4inputmux(out, in, select );
+
+input[3:0] in;
+input[1:0] select;
+output out;
+
+wire      q;
+wire[1:0] select;
+wire[3:0] d;
+
+assign q = d[select];
+
+endmodule
